@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Todo</title>
+    <title>PhonX Rave</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
@@ -18,7 +18,14 @@
     <!-- Center content -->
     <ion-side-menu-content>
       <ion-header-bar class="bar-dark">
-        <h1 class="title">Todo</h1>
+        <!-- <h1 class="title">Todo</h1> -->
+        <!-- New Task button-->
+        <button class="button button-icon" ng-click="oldUser()">
+          <i>Log In</i>
+        </button>
+        <button class="button button-icon" ng-click="newUser()">
+          <i>Sign Up</i>
+        </button>
       </ion-header-bar>
       <ion-content>
         <!-- our list and list items -->
@@ -39,17 +46,17 @@
 
   </ion-side-menus>
 
-  <script id="new-task.html" type="text/ng-template">
+  <script id="login.html" type="text/ng-template">
 
+    // Log In Modal
     <div class="modal">
-
-      <!-- Modal header bar -->
+      // <!-- Modal header bar -->
       <ion-header-bar class="bar-secondary">
-        <h1 class="title">New Task</h1>
-        <button class="button button-clear button-positive" ng-click="closeNewTask()">Cancel</button>
+        <h1 class="title">Log In</h1>
+        <button class="button button-clear button-positive" ng-click="closeOldUser()">Cancel</button>
       </ion-header-bar>
 
-      <!-- Modal content area -->
+      // <!-- Modal content area -->
       <ion-content>
 
         <form ng-submit="createTask(task)">
@@ -62,9 +69,33 @@
             <button type="submit" class="button button-block button-positive">Create Task</button>
           </div>
         </form>
-
       </ion-content>
+    </div>
+  </script>
 
+  <script id="signUp.html" type="text/ng-template">
+    // Sign Up Modal
+    <div class="modal">
+      // <!-- Modal header bar -->
+      <ion-header-bar class="bar-secondary">
+        <h1 class="title">Sign Up</h1>
+        <button class="button button-clear button-positive" ng-click="closeNewUser()">Cancel</button>
+      </ion-header-bar>
+
+      // <!-- Modal content area -->
+      <ion-content>
+
+        <form ng-submit="createTask(task)">
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="What do you need to do?" ng-model="task.title">
+            </label>
+          </div>
+          <div class="padding">
+            <button type="submit" class="button button-block button-positive">Create Task</button>
+          </div>
+        </form>
+      </ion-content>
     </div>
 
   </script>

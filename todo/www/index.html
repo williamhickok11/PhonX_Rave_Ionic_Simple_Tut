@@ -13,7 +13,7 @@
     <script src="cordova.js"></script>
   </head>
   <body ng-app="phonX" ng-controller="PhonXCtrl">
-  <ion-side-menus>
+  <ion-side-menus id="LogInScreen">
 
     <!-- Center content -->
     <ion-side-menu-content>
@@ -52,7 +52,7 @@
     <div class="modal">
       // <!-- Modal header bar -->
       <ion-header-bar class="bar-secondary">
-        <h1 class="title">Log In</h1>
+        <h1 class="title">PhonX Rave</h1>
         <button class="button button-clear button-positive" ng-click="closeOldUser()">Cancel</button>
       </ion-header-bar>
 
@@ -66,7 +66,7 @@
             </label>
           </div>
           <div class="padding">
-            <button type="submit" class="button button-block button-positive">Create Task</button>
+            <button type="submit" class="button button-block button-positive">Log In</button>
           </div>
         </form>
       </ion-content>
@@ -78,21 +78,27 @@
     <div class="modal">
       // <!-- Modal header bar -->
       <ion-header-bar class="bar-secondary">
-        <h1 class="title">Sign Up</h1>
+        <h1 class="title">PhonX Rave</h1>
         <button class="button button-clear button-positive" ng-click="closeNewUser()">Cancel</button>
       </ion-header-bar>
 
       // <!-- Modal content area -->
       <ion-content>
 
-        <form ng-submit="createTask(task)">
+        <form ng-submit="createNewUser(newUserInfo)">
           <div class="list">
             <label class="item item-input">
-              <input type="text" placeholder="What do you need to do?" ng-model="task.title">
+              <input type="text" placeholder="User Name" ng-model="newUserInfo.userName">
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="Email" ng-model="newUserInfo.userEmail">
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="newUserInfo.userPassword">
             </label>
           </div>
           <div class="padding">
-            <button type="submit" class="button button-block button-positive">Create Task</button>
+            <button type="submit" class="button button-block button-positive">Sign Up</button>
           </div>
         </form>
       </ion-content>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
@@ -13,11 +14,12 @@
     <script src="cordova.js"></script>
   </head>
   <body ng-app="phonX" ng-controller="PhonXCtrl">
-  <ion-side-menus id="LogInScreen">
+
+  <!-- <ion-side-menus id="LogInScreen"> -->
 
     <!-- Center content -->
-    <ion-side-menu-content>
-      <ion-header-bar class="bar-dark">
+    <!-- <ion-side-menu-content> -->
+      <ion-header-bar class="bar-dark" id-"loginScreen">
         <!-- <h1 class="title">Todo</h1> -->
         <!-- New Task button-->
         <button class="button button-icon" ng-click="oldUser()">
@@ -35,18 +37,11 @@
           </ion-item>
         </ion-list>
       </ion-content>
-    </ion-side-menu-content>
+    <!-- </ion-side-menu-content> -->
 
-    <!-- Left menu -->
-    <ion-side-menu side="left">
-      <ion-header-bar class="bar-dark">
-        <h1 class="title">Projects</h1>
-      </ion-header-bar>
-    </ion-side-menu>
+  <!-- </ion-side-menus> -->
 
-  </ion-side-menus>
-
-
+  <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
   <!--firebase-->
    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
   <!--angularfire-->
@@ -113,5 +108,7 @@
   </script>
 
   <script src="js/app.js"></script>
+  <script src="js/appRoute.js"></script>
+  <script src="js/main_menue_Ctrl.js"></script>
 </body>
 </html>

@@ -99,7 +99,7 @@ angular.module('phonX', ['ionic'])
             console.log("Successfully created user account with uid:", userData.uid);
             // On click, create the game
             console.log("ref.getAuth", userData.uid);
-            currentPlayerUID = uid;
+            currentPlayerUID = userData.uid;
             // var authData = ref.getAuth()
             var newPlayersRef = ref.child("Players");
             var newPlayer = newPlayersRef.push();
@@ -138,7 +138,8 @@ angular.module('phonX', ['ionic'])
               playerId: userData.uid
             });
           }
-        }
+        })
+      }
     })
     $scope.signUpModal.hide();
     // newUserInfo.userName = "";
